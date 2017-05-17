@@ -18,11 +18,25 @@ namespace :cachetool do
       end
     end
   end
+
+  desc <<-DESC
+    Access a cachetool command directly
+    This tasks allows access to any cachetool command.
+  DESC
+  task :run, :command do |t, args|
+    args.with_defaults(:command => :list)
+    on release_roles(fetch(:cachetool_roles)) do
+      within fetch(:cachetool_working_dir) do
+        execute :cachetool, args[:command], *args.extras
+      end
+    end
+  end
 end
 
 namespace :load do
   task :defaults do
     set :cachetool_roles, :all
     set :cachetool_download_url, "https://gordalina.github.io/cachetool/downloads/cachetool.phar"
+    set :cachetool_working_dir, -> { fetch(:release_path) }
   end
 end
