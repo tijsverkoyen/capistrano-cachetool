@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["capistrano-cachetool@verkoyen.eu"]
 
   spec.summary       = %q{Cachetool support for Capistrano 3.x}
-  spec.description   = %q{Exposes the [Cachetool by Goralina](http://gordalina.github.io/cachetool/) in Cpaistrano 3.x}
+  spec.description   = %q{Exposes the [Cachetool by Goralina](http://gordalina.github.io/cachetool/) in Capistrano 3.x}
   spec.homepage      = "https://github.com/tijsverkoyen/capistrano-cachetool"
   spec.license       = "MIT"
 
