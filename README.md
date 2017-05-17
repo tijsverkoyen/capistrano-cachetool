@@ -2,6 +2,8 @@
 
 Exposes the [Cachetool by Goralina](http://gordalina.github.io/cachetool/) in Capistrano 3.x
 
+This plugin is heavily inspired on [capistrano/composer](https://github.com/capistrano/composer).
+
 
 ## Installation
 
