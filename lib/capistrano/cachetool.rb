@@ -1,7 +1,1 @@
-require "capistrano/cachetool/version"
-
-module Capistrano
-  module Cachetool
-    # Your code goes here...
-  end
-end
+load File.expand_path('../tasks/cachetool.rake', __FILE__)
