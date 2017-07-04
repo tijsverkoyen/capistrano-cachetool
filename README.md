@@ -40,7 +40,7 @@ Configurable options, shown here with defaults:
 
 ```
 set :cachetool_roles, :all
-set :cachetool_download_url, "https://gordalina.github.io/cachetool/downloads/cachetool.phar"
+set :cachetool_download_url, 'https://gordalina.github.io/cachetool/downloads/cachetool.phar'
 set :cachetool_working_dir, -> { fetch(:release_path) }
 ```
 
