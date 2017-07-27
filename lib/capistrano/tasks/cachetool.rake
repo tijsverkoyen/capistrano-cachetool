@@ -11,9 +11,9 @@ namespace :cachetool do
   task :install_executable do
     on release_roles(fetch(:cachetool_roles)) do
       within shared_path do
-        if test "[", "!", "-e", "cachetool.phar", "]"
-          execute :curl, "-sO", fetch(:cachetool_download_url)
-          execute :chmod, "+x", "cachetool.phar"
+        if test '[', '!', '-e', 'cachetool.phar', ']'
+          execute :curl, '-sO', fetch(:cachetool_download_url)
+          execute :chmod, '+x', 'cachetool.phar'
         end
       end
     end
@@ -36,7 +36,7 @@ end
 namespace :load do
   task :defaults do
     set :cachetool_roles, :all
-    set :cachetool_download_url, "https://gordalina.github.io/cachetool/downloads/cachetool.phar"
+    set :cachetool_download_url, 'https://gordalina.github.io/cachetool/downloads/cachetool.phar'
     set :cachetool_working_dir, -> { fetch(:release_path) }
   end
 end
